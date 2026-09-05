@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clement K. — Data & Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="site-nav"><span class="brand">Clement K.</span></div>
+
+  <section class="hero">
+    <h1>Data that tells you what to do next.</h1>
+    <p>I'm Clement — I build dashboards, tools, and analysis that turn raw numbers into decisions, for individuals and small businesses across Lagos and beyond.</p>
+    <a class="cta" href="#dashboard">See a live example below</a>
+  </section>
+
+  <section class="about">
+    <h2>What I do</h2>
+    <p class="bio">Mathematics graduate turned data analyst and project manager, with a background in teaching and a Risk Management certification. I split my time between analysis work and building the tools that make that analysis usable.</p>
+
+    <div class="services">
+      <div class="service teal">
+        <div class="name">Data analysis</div>
+        <div class="desc">Cleaning, modeling, and visualizing data so it answers real questions.</div>
+      </div>
+      <div class="service gold">
+        <div class="name">Web development</div>
+        <div class="desc">Dashboards and sites built to actually get used, not just look good.</div>
+      </div>
+      <div class="service">
+        <div class="name">Project management</div>
+        <div class="desc">Keeping the work organized from first idea to shipped result.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="auth-form" id="authForm">
+    <h2 id="authTitle">Log in</h2>
+    <p class="auth-error" id="authError"></p>
+    <input type="email" id="authEmail" placeholder="Email" />
+    <input type="password" id="authPassword" placeholder="Password" />
+    <button id="authSubmit" data-mode="login">Log in</button>
+    <button id="authToggle" class="auth-toggle" type="button">New here? Sign up</button>
+  </div>
+
+  <section class="dashboard" id="dashboard" style="display:none;">
+    <h2>Live dashboard</h2>
+    <p class="lede">Your own finance and business numbers, tracked in one place.</p>
+
+    <form class="entry-form" id="entryForm">
+      <select id="entryType">
+        <option value="personal">Personal</option>
+        <option value="business">Business</option>
+      </select>
+      <select id="entryDirection">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+      <input type="text" id="entryCategory" placeholder="Category (e.g. Rent, Sale)" required />
+      <input type="number" id="entryAmount" placeholder="Amount" step="0.01" required />
+      <input type="date" id="entryDate" />
+      <button type="submit">Add entry</button>
+      <p class="entry-error" id="entryError"></p>
+    </form>
+
+    <div class="groups">
+      <div class="group">
+        <h3>Personal finance</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Balance</div>
+            <div class="value accent-teal" id="balance">₦0</div>
+          </div>
+          <div class="card">
+            <div class="label">Spent this month</div>
+            <div class="value" id="spend">₦0</div>
+          </div>
+        </div>
+        <div class="panel-block">
+          <div class="progress-row">
+            <span>Savings goal</span>
+            <span id="savingsPct">0%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="savingsFill"></div></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <h3>Business performance</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="label">Revenue</div>
+            <div class="value accent-gold" id="revenue">₦0</div>
+          </div>
+          <div class="card">
+            <div class="label">Orders</div>
+            <div class="value" id="orders">0</div>
+          </div>
+        </div>
+        <div class="panel-block">
+          <div class="chart-label">
+            <span>6-month trend</span>
+            <span id="trendDelta"></span>
+          </div>
+          <svg viewBox="0 0 260 70" id="trendChart"></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Let's work together</h2>
+    <p>Have a project in mind, or want to talk through what a dashboard like the one above could look like for your data? Reach out.</p>
+    <div class="contact-links">
+      <a href="mailto:kosiclement7@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/clement-chukwu-73a559318" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://kosiclement7-collab.github.io" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <div class="site-footer">
+    <span>Clement K.</span>
+    <span>Lagos, Nigeria</span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
+
